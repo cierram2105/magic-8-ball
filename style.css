@@ -5,14 +5,15 @@ body {
   padding: 0px;
   background-color: #f8f8f8;
   background-image: url('bkgd2.png');
-  display: flex;
 }
 .page {
   width: 80%;
   max-width: 960px;
   margin: 0 auto;
+  display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 .ball, .button {
   margin: 0 4%;
@@ -30,11 +31,15 @@ body {
   font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
   color: #222;
   text-transform: uppercase;
-  text-align: center;
-  justify-content: center;
 }
 
 /*Media Query below for .answer so answer text stays centered once it reaches past 980px*/
+
+@media only screen and (max-width: 980px) {
+    .ball, .button {
+        margin-right: 13%;
+    }
+}
 
 #questionButton {
   font: 26px 'Montserrat', Helvetica, Arial, sans-serif;
